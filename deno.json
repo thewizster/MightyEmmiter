@@ -1,0 +1,15 @@
+{
+  "name": "@mightyemitter/core",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "tasks": {
+    "test": "deno test --allow-none",
+    "check": "deno check mod.ts",
+    "bench": "deno bench"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true
+  }
+}
