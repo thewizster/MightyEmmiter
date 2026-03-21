@@ -1,5 +1,5 @@
 {
-  "name": "@mightyemitter/core",
+  "name": "@wxt/mightyemitter",
   "version": "0.1.0",
   "license": "MIT",
   "exports": "./mod.ts",
