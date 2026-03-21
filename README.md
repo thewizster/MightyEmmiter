@@ -12,17 +12,17 @@ Small, fast, and portable — works in Deno, Node, Bun, and browsers.
 
 ```ts
 // Deno / JSR
-import { MightyEmitter } from "@mightyemitter/core";
+import { MightyEmitter } from "@wxt/mightyemitter";
 
 // Node / Bun (after installing from JSR)
-// npx jsr add @mightyemitter/core
-import { MightyEmitter } from "@mightyemitter/core";
+// npx jsr add @wxt/mightyemitter
+import { MightyEmitter } from "@wxt/mightyemitter";
 ```
 
 ## Quick Start
 
 ```ts
-import { MightyEmitter } from "@mightyemitter/core";
+import { MightyEmitter } from "@wxt/mightyemitter";
 
 // 1. Define your event map
 type Events = {
