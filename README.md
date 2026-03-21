@@ -2,7 +2,6 @@
 
 [![JSR Version](https://jsr.io/badges/@wxt/mightyemitter)](https://jsr.io/@wxt/mightyemitter)
 [![JSR Score](https://jsr.io/badges/@wxt/mightyemitter/score)](https://jsr.io/@wxt/mightyemitter)
-[![codecov](https://codecov.io/gh/mightyemitter/core/branch/main/graph/badge.svg)](https://codecov.io/gh/mightyemitter/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
 A pure TypeScript, zero-dependency, type-safe event emitter.
