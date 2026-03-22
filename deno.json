@@ -1,8 +1,36 @@
 {
   "name": "@wxt/mightyemitter",
-  "version": "0.1.2",
+  "version": "0.1.3",
+  "description": "A pure TypeScript, zero-dependency, type-safe event emitter. Small, fast, and portable — works in Deno, Node, Bun, and browsers.",
   "license": "MIT",
   "exports": "./mod.ts",
+  "publish": {
+    "include": ["mod.ts", "LICENSE", "README.md", "deno.json"]
+  },
+  "keywords": [
+    "event-emitter",
+    "eventemitter",
+    "events",
+    "typed-events",
+    "type-safe",
+    "typescript",
+    "pubsub",
+    "observer-pattern",
+    "async-iterator",
+    "deno",
+    "node",
+    "bun",
+    "browser",
+    "zero-dependency"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thewizster/MightyEmmiter"
+  },
+  "homepage": "https://jsr.io/@wxt/mightyemitter",
+  "bugs": {
+    "url": "https://github.com/thewizster/MightyEmmiter/issues"
+  },
   "tasks": {
     "test": "deno test --allow-none",
     "check": "deno check mod.ts",
