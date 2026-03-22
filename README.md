@@ -1,11 +1,37 @@
 # MightyEmitter
 
+**A pure TypeScript, zero-dependency, type-safe event emitter for Deno, Node.js, Bun, and browsers.**
+
 [![JSR Version](https://jsr.io/badges/@wxt/mightyemitter)](https://jsr.io/@wxt/mightyemitter)
 [![JSR Score](https://jsr.io/badges/@wxt/mightyemitter/score)](https://jsr.io/@wxt/mightyemitter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![GitHub](https://img.shields.io/github/stars/thewizster/MightyEmmiter?style=social)](https://github.com/thewizster/MightyEmmiter)
 
-A pure TypeScript, zero-dependency, type-safe event emitter.
-Small, fast, and portable — works in Deno, Node, Bun, and browsers.
+MightyEmitter is a lightweight, fully typed event emitter built from the ground
+up in TypeScript. It delivers compile-time safety for event names and payloads
+while staying small enough for any project — from CLI tools to frontend apps.
+
+## Why MightyEmitter?
+
+| Feature | MightyEmitter | Node EventEmitter | mitt | EventEmitter3 |
+| --- | :---: | :---: | :---: | :---: |
+| Full type safety | Yes | No | Partial | No |
+| Zero dependencies | Yes | Yes | Yes | Yes |
+| `async` / `await` support (`next`) | Yes | No | No | No |
+| Async iteration (`iter`) | Yes | No | No | No |
+| AbortSignal support | Yes | No | No | No |
+| Works in Deno, Node, Bun, & browsers | Yes | Node only | Yes | Yes |
+
+- **Type-safe** — event names and payloads are checked at compile time via
+  generics. No more silent typos.
+- **Zero dependencies** — nothing to audit, nothing to break.
+- **Tiny footprint** — a single file, under 5 KB unminified.
+- **Async-first** — `next()` returns a promise for the next event; `iter()`
+  gives you an `AsyncIterableIterator` for streaming consumption.
+- **Cancellable** — both `next()` and `iter()` accept an `AbortSignal` for
+  clean teardown.
+- **Cross-runtime** — identical API across Deno, Node.js, Bun, and all modern
+  browsers.
 
 ## Install
 
@@ -197,6 +223,40 @@ async function processStream(emitter: MightyEmitter<{ data: number }>) {
     if (value < 0) ac.abort(); // stop on negative
   }
 }
+```
+
+## Benchmarks
+
+Run the included benchmarks with:
+
+```sh
+deno bench
+```
+
+MightyEmitter uses a `Map<K, Set<Listener>>` internally for O(1) add/delete and
+safe iteration, keeping emit-per-listener overhead minimal even at scale.
+
+## Runtime Compatibility
+
+| Runtime | Supported |
+| --- | :---: |
+| Deno | Yes |
+| Node.js (via JSR) | Yes |
+| Bun | Yes |
+| Modern browsers | Yes |
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feat/amazing-feature`)
+3. Run `deno task test` and `deno task check`
+4. Open a pull request
+
+## License
+
+[MIT](./LICENSE) — free for personal and commercial use.
 ```
 
 ## Development
