@@ -367,4 +367,11 @@ MIT
 
 ---
 
+<div align="center">
 Built with ❤️ in Texas
+
+**Built with [Deno](https://deno.land/) · Published on [JSR](https://jsr.io/@wxt/mightyemitter) · Source on [GitHub](https://github.com/thewizster/MightyEmmiter)**
+
+If MightyEmitter is useful to you, consider giving it a ⭐ on GitHub — it helps others find it.
+
+</div>
