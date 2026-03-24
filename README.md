@@ -364,3 +364,7 @@ The test suite covers:
 ## License
 
 MIT
+
+---
+
+Built with ❤️ in Texas
